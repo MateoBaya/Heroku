@@ -8,6 +8,7 @@ class Usuario extends Model
 {
     use SoftDeletes;
 
+    /*
     public $id;
     public $usuario;
     public $clave;
@@ -18,10 +19,17 @@ class Usuario extends Model
     public $estatus;
     public $tiempoEstimado;
     public $perfil;
-
-
+    */
+    /*
+    function __construct()
+    {
+        
+    }
+    */
     protected $table = 'usuarios';
-
+    protected $primaryKey = 'id';
+    public $incrementing = true;
+    public $timestamps = false;
     const CREATED_AT = 'fechaAlta';
     const DELETED_AT = 'fechaBaja';
 
@@ -29,4 +37,3 @@ class Usuario extends Model
         'usuario', 'clave', 'nombre', 'apellido', 'tipoUsuario', 'idProducto', 'estatus', 'tiempoEstimado', 'perfil', 'fechaAlta','fechaBaja'
     ];
 }
-?>

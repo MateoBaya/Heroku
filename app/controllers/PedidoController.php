@@ -100,7 +100,7 @@ class PedidoController implements IApiUsable
   {
     $pedidoId = $args['id'];
     // Buscamos el Pedido
-    $pedido = Pedido::find($PedidoId);
+    $pedido = Pedido::find($pedidoId);
     // Borramos
     $pedido->delete();
 

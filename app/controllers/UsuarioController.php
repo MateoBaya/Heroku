@@ -11,7 +11,7 @@ class UsuarioController implements IApiUsable
   {
     $parametros = $request->getParsedBody();
 
-    $id = $parametros['id'];
+    //$id = $parametros['id'];
     $usuario = $parametros['usuario'];
     $clave = $parametros['clave'];
     $nombre = $parametros['nombre'];
@@ -23,7 +23,6 @@ class UsuarioController implements IApiUsable
     $perfil = $parametros['perfil'];
     // Creamos el usuario
     $usr = new Usuario();
-    $usr->id = $id;
     $usr->usuario = $usuario;
     $usr->clave = $clave;
     $usr->nombre = $nombre;
