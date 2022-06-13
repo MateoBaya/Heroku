@@ -23,7 +23,7 @@ class Logger
         {
             $response->getBody()->write("Metodo ".$requestType." verificar");
             $dataParseada = $request->getParsedBody();
-            $nombre = $dataParseada['nombre'];
+            $nombre = $dataParseada['usuario'];
             $perfil = $dataParseada['perfil'];
             if($perfil === 'admin')
             {
