@@ -11,7 +11,6 @@ class UsuarioController implements IApiUsable
   {
     $parametros = $request->getParsedBody();
 
-    //$id = $parametros['id'];
     $usuario = $parametros['usuario'];
     $clave = $parametros['clave'];
     $nombre = $parametros['nombre'];

@@ -11,7 +11,6 @@ class ProductoController implements IApiUsable
   {
     $parametros = $request->getParsedBody();
 
-    $id = $parametros['id'];
     $producto = $parametros['producto'];
     $descripcion = $parametros['descripcion'];
     $precio = $parametros['precio'];
@@ -19,7 +18,6 @@ class ProductoController implements IApiUsable
 ;
     // Creamos el producto
     $prd = new Producto();
-    $prd->id = $id;
     $prd->descripcion = $descripcion;
     $prd->precio = $precio;
     $prd->personalRequerido = $personalRequerido;

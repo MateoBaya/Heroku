@@ -11,7 +11,6 @@ class PedidoController implements IApiUsable
   {
     $parametros = $request->getParsedBody();
 
-    $id = $parametros['id'];
     $productos = $parametros['productos'];
     $precioTotal = $parametros['precioTotal'];
     $tiempoTotalEstimado = $parametros['tiempoTotalEstimado'];
@@ -19,7 +18,6 @@ class PedidoController implements IApiUsable
 
     // Creamos el Pedido
     $pdd = new Pedido();
-    $pdd->id = $id;
     $pdd->productos = $productos;
     $pdd->precioTotal = $precioTotal;
     $pdd->tiempoTotalEstimado = $tiempoTotalEstimado;

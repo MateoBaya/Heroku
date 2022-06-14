@@ -8,11 +8,16 @@ class Pedido extends Model
 {
     use SoftDeletes;
 
+    /*
     public $id;
     public $productos;
     public $precioTotal;
     public $tiempoTotalEstimado;
     public $isFinished;
+    */
+    protected $primaryKey = 'id';
+    public $incrementing = true;
+    public $timestamps = false;
 
     protected $table = 'productos';
 

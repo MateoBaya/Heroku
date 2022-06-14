@@ -11,13 +11,11 @@ class MesaController implements IApiUsable
   {
     $parametros = $request->getParsedBody();
 
-    $id = $parametros['id'];
     $estado = $parametros['estado'];
     $idPedido = $parametros['idPedido'];
 
     // Creamos la mesa
     $mesa = new Mesa();
-    $mesa->id = $id;
     $mesa->estado = $estado;
     $mesa->idPedido = $idPedido;
 
