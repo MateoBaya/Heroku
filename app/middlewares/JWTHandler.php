@@ -11,7 +11,7 @@ class JWTHandler
         $now = time();
         $payload = array(
             'iat' => $now,
-            'exp' => $now + (60000),
+            'exp' => $now + (20000),
             'data' => $data,
             'app' => "1er Intento JWT"
         );

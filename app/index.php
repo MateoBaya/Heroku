@@ -51,12 +51,12 @@ $app->group('/usuarios', function (RouteCollectorProxy $group) {
     $group->post('[/]', \UsuarioController::class . ':CargarUno');
     $group->put('/{id}', \UsuarioController::class . ':ModificarUno');
     $group->delete('/{id}', \UsuarioController::class . ':BorrarUno');
-  });
+  })->add(\Logger::class . ':VerificadorCredenciales');
+  
 
 $app->get('[/]', function (Request $request, Response $response) {    
     $response->getBody()->write("Slim Framework 4 PHP");
     return $response;
-
 });
 
 $app->run();

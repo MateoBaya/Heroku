@@ -54,7 +54,7 @@ $app->addBodyParsingMiddleware();
 $app->group('/usuarios', function (RouteCollectorProxy $group) {
     $group->get('[/]', \UsuarioController::class . ':TraerTodos');
     $group->get('/{usuario}', \UsuarioController::class . ':TraerUno');
-    $group->post('[/]', \UsuarioController::class . ':CargarUno');
+    $group->post('/{usuario}', \UsuarioController::class . ':CargarUno');
   })->add(\Logger::class . ':VerificadorCredenciales');
 
 
